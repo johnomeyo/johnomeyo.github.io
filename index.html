@@ -58,10 +58,38 @@
             border-radius: 10px;
         }
 
-        @media (max-width: 768px) {
-            .box {
-                padding: 20px;
-                /* Adjust the padding for smaller screens to create space between inputs */
+        .footerNav {
+            margin: 15px 0;
+        }
+
+        .footerNav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+
+        .footerNav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+            opacity: 0.7;
+            transition: 0.5s;
+        }
+
+        .footerNav ul li a:hover {
+            opacity: 1;
+            color: #404650;
+        }
+
+        @media (max-width: 700px) {
+            .footerNav ul {
+                flex-direction: column;
+            }
+
+            .footerNav ul li {
+                width: 100%;
+                text-align: start;
             }
         }
 
@@ -80,12 +108,29 @@
             border: 2px solid red;
             /* Change this to the desired border color */
         }
+
+
+        i {
+            font-size: 30px;
+            color: white;
+            margin: 15px;
+        }
+
+        i:hover {
+            color: #6E6F77;
+            transition: 0.5s;
+        }
+
+        .navbar-toggler-icon {
+            color: #ff0000;
+            /* Replace with your desired color */
+        }
     </style>
 
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-#213F64" style=" padding-left: 2rem;padding-top: 2rem;">
+     <nav class="navbar navbar-expand-lg navbar-light bg-#213F64" style=" padding-left: 2rem;padding-top: 2rem;">
         <div class="container-fluid">
             <a class="navbar-brand" href="#" style="color: aliceblue; font-size: 40px; font-weight: bold;">John</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -96,19 +141,17 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#" style="color: aliceblue;">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#home" style="color: aliceblue;">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" style="color: aliceblue;">About</a>
+                        <a class="nav-link" href="#about" style="color: aliceblue;">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects" style="color: aliceblue;">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" style="color: aliceblue;">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" style="color: aliceblue;">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" style="color: aliceblue;">Contact Us</a>
+                        <a class="nav-link" href="#contact" style="color: aliceblue;">Contact Us</a>
                     </li>
 
                     <button type="button" class="btn btn-primary">Hire me</button>
@@ -118,8 +161,11 @@
 
             </div>
         </div>
-    </nav>
-    <section>
+    </nav> 
+
+
+
+    <section id="home">
         <div class="row">
             <div style="padding: 2rem;" class="box">
                 <p style="color: antiquewhite; "><span style="font-size: 30px; font-weight: normal;">👋 Hi,
@@ -141,7 +187,7 @@
 
     </section>
 
-    <section>
+    <section id="about">
         <div class="row">
             <div class="box" style="display: flex; justify-content: center;align-items: center;">
                 <img src="dev.jpg" alt="about me" style="border-radius: 10px; display: flex; ">
@@ -195,7 +241,7 @@
 
 
     </section>
-    <section>
+    <section id="projects">
         <p style="font-size: 35px; font-weight: bold; text-align: center;">
             My Projects
         </p>
@@ -247,7 +293,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section id="contact">
         <p style="font-size: 35px; font-weight: bold; text-align: center;">
             Contact Me
         </p>
@@ -283,7 +329,7 @@
 
                     <input type="email" id="email" name="email" placeholder="Enter your email..." required>
                     <p></p>
-                    <textarea name="" id="" cols="55" rows="7" placeholder="Message..." required
+                    <textarea name="message" id="" cols="55" rows="7" placeholder="Message..." required
                         style=" resize:both ;max-width: 100%; overflow: auto;"></textarea>
 
                 </form>
@@ -292,6 +338,37 @@
 
             </div>
     </section>
+    <footer>
+        <section>
+            <div style="background-color: #181B27; padding: 20px;">
+                <p style="color: white; font-size: 40px; font-weight: bold;text-align: center;">John</p>
+                <p></p>
+                <div class="footerNav">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact Me</a></li>
+                    </ul>
+                </div>
+                <div style="display: flex;justify-content: center;">
+                    <a href="https://github.com/johnomeyo">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/john-omeyo-9ba94423b/">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://twitter.com/Mooncake_fs">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+
+                <hr style="color: #ccc;">
+                <p></p>
+                <p style="text-align: center;color: grey;">Copyright &copy; 2022 -Powered by The JOHN</p>
+            </div>
+        </section>
+    </footer>
     <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
