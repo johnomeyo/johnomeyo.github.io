@@ -1,0 +1,168 @@
+body {
+    background-color: #111318;
+}
+
+p {
+    color: aliceblue;
+}
+
+.row {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.box {
+    max-width: 600px;
+
+    min-height: 100px;
+
+    margin: 10px;
+
+    color: white;
+}
+
+.box2 {
+    max-width: 400px;
+
+    min-height: 400px;
+
+    margin: 10px;
+    border-radius: 15px;
+    background-color: #20222A;
+
+
+}
+
+.box3 {
+    max-width: 300px;
+    background-color: #181B27;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.footerNav {
+    margin: 15px 0;
+}
+
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.footerNav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footerNav ul li a:hover {
+    opacity: 1;
+    color: #404650;
+}
+
+@media (max-width: 700px) {
+    .footerNav ul {
+        flex-direction: column;
+    }
+
+    .footerNav ul li {
+        width: 100%;
+        text-align: start;
+    }
+}
+
+input,
+textarea {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    color: white;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border: 2px solid red;
+    /* Change this to the desired border color */
+}
+
+
+i {
+    font-size: 30px;
+    color: white;
+    margin: 15px;
+}
+
+i:hover {
+    color: #6E6F77;
+    transition: 0.5s;
+}
+
+.navbar-toggler-icon {
+    color: #ff0000;
+    /* Replace with your desired color */
+}
+
+.box4 {
+    background-color: #20222A;
+    max-width: 300px;
+    min-height: 250px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 15px;
+    margin: 10px;
+}
+
+.container {
+    padding: 2rem;
+    background-color: #ff0000;
+}
+
+.slider-wrapper {
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+}
+.slider{
+    display: flex;
+    aspect-ratio: 16/9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.35);
+    border-radius: 0.5rem;
+}
+.slider img{
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+.slider-nav{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.slider-nav a{
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+.slider-nav a:hover{
+opacity: 1;
+}
